@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luminaire - Grabbo</title>
+    <title>Grabbo</title>
     
     <!-- PWA Home Screen Manifest & Icons -->
     <link rel="manifest" href="/static/manifest.json">
@@ -26,6 +26,15 @@
         }
         .splash-screen {
             animation: splashFade 2.2s ease-in-out forwards;
+        }
+        /* Golden-Brown Gradient Popping Effect */
+        .text-pop {
+            font-weight: 900;
+            letter-spacing: -0.01em;
+            background: linear-gradient(135deg, #d97706 0%, #b45309 50%, #854d0e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 4px 10px rgba(180, 83, 9, 0.3));
         }
     </style>
     <!-- Check if app already launched in this session -->
@@ -51,7 +60,7 @@
     <main class="px-5 pt-10 pb-32 max-w-7xl mx-auto">
         <header class="flex justify-between items-center mb-6">
             <i class="ph ph-list text-2xl text-gray-800"></i>
-            <h1 class="text-2xl font-bold tracking-tight">Luminaire</h1>
+            <h1 class="text-2xl font-black tracking-tight text-pop">GRABBO</h1>
             <div class="flex items-center gap-4">
                 <i class="ph ph-magnifying-glass text-2xl text-gray-800"></i>
                 <div class="w-8 h-8 rounded-full bg-gray-300 overflow-hidden">
