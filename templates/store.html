@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luminaire</title>
+    <title>Luminaire - Grabbo</title>
+    
+    <!-- PWA Home Screen Manifest & Icons -->
+    <link rel="manifest" href="/static/manifest.json">
+    <link rel="apple-touch-icon" href="/static/306416154_413634597353696_7349665440400445824_n.jpg">
+    <link rel="icon" type="image/jpeg" href="/static/306416154_413634597353696_7349665440400445824_n.jpg">
+    <meta name="theme-color" content="#111827">
+
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -24,7 +31,6 @@
     <!-- Check if app already launched in this session -->
     <script>
         if (sessionStorage.getItem('appLaunched')) {
-            // Hide splash screen instantly if already launched
             document.write('<style>.splash-screen { display: none !important; }</style>');
         } else {
             sessionStorage.setItem('appLaunched', 'true');

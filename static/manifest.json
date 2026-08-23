@@ -1,0 +1,22 @@
+{
+  "name": "Grabbo Quick Commerce",
+  "short_name": "Grabbo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F2EB",
+  "theme_color": "#111827",
+  "icons": [
+    {
+      "src": "/static/306416154_413634597353696_7349665440400445824_n.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/306416154_413634597353696_7349665440400445824_n.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
