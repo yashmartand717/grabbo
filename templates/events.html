@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminaire - Events</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #FAF8F5; color: #111827; }
+    </style>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="min-h-screen pb-24 font-sans">
+
+    <main class="px-5 pt-8 pb-32 max-w-3xl mx-auto">
+        <!-- Header Controls -->
+        <header class="flex justify-between items-center mb-6">
+            <i class="ph ph-list text-2xl text-gray-800"></i>
+            <h1 class="text-xl font-bold tracking-tight">Luminaire Logistics</h1>
+            <div class="w-8 h-8 rounded-full bg-gray-300 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover" />
+            </div>
+        </header>
+
+        <!-- Event Hero Image -->
+        <div class="relative w-full h-72 rounded-3xl overflow-hidden mb-6">
+            <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover" />
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6">
+                <span class="inline-flex items-center gap-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1.5 rounded-full mb-3 border border-white/30">
+                    <i class="ph ph-star-fill"></i> Premium Event
+                </span>
+                <h2 class="text-4xl font-bold text-white leading-tight mb-4">Logistics<br/>Innovation<br/>Summit</h2>
+                <div class="flex gap-4 text-white text-xs font-medium">
+                    <div class="flex items-center gap-1"><i class="ph ph-calendar-blank text-base"></i> October 12-14, 2026</div>
+                    <div class="flex items-center gap-1"><i class="ph ph-map-pin text-base"></i> Geneva, Switzerland</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="mb-8">
+            <h3 class="text-lg font-bold flex items-center gap-2 mb-3"><i class="ph ph-info text-xl text-gray-500"></i> About the Event</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Join industry leaders and visionaries at the foremost gathering for supply chain optimization. The Logistics Innovation Summit explores next-generation automated warehousing, sustainable last-mile delivery, and AI-driven predictive routing. Experience exclusive keynote sessions, intimate networking opportunities, and hands-on demonstrations.
+            </p>
+        </div>
+
+        <!-- Booking & Slots Section -->
+        <div class="mb-8">
+            <h3 class="text-lg font-bold mb-4">Book Your Pass</h3>
+            
+            <p class="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-2">Select a Date</p>
+            <div class="flex gap-2 mb-6">
+                <button class="bg-black text-white px-5 py-2.5 rounded-xl text-sm font-bold">Oct 12</button>
+                <button class="bg-transparent border border-gray-300 text-gray-600 px-5 py-2.5 rounded-xl text-sm font-medium hover:border-black">Oct 13</button>
+                <button class="bg-transparent border border-gray-300 text-gray-600 px-5 py-2.5 rounded-xl text-sm font-medium hover:border-black">Oct 14</button>
+            </div>
+
+            <p class="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-2">Select a Session</p>
+            <div class="space-y-3 mb-6">
+                <!-- Selected Slot -->
+                <div class="border-2 border-black rounded-xl p-4 flex justify-between items-center cursor-pointer bg-white">
+                    <div>
+                        <p class="font-bold text-sm">Morning Keynote</p>
+                        <p class="text-xs text-gray-500">09:00 - 12:00</p>
+                    </div>
+                    <i class="ph-fill ph-radio-button text-2xl"></i>
+                </div>
+                
+                <!-- Unselected Slot -->
+                <div class="border border-gray-300 rounded-xl p-4 flex justify-between items-center cursor-pointer bg-white hover:border-black">
+                    <div>
+                        <p class="font-bold text-sm">Afternoon Workshops</p>
+                        <p class="text-xs text-gray-500">13:30 - 17:00</p>
+                    </div>
+                    <i class="ph ph-circle text-2xl text-gray-300"></i>
+                </div>
+            </div>
+
+            <!-- Pricing & Checkout -->
+            <!-- Pricing & Checkout -->
+            <div class="pt-4 border-t border-gray-200">
+                <div class="flex justify-between text-sm mb-2 text-gray-600"><span>Executive Pass</span><span class="text-black font-medium">₹85,000</span></div>
+                <div class="flex justify-between text-sm mb-6 text-gray-600"><span>Taxes & Fees (18% GST)</span><span class="text-black font-medium">₹15,300</span></div>
+                
+                <button class="w-full bg-black text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors">
+                    <i class="ph ph-shopping-cart text-lg"></i> Confirm Booking
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Unified Bottom Navigation -->
+    <!-- Unified Bottom Navigation -->
+    <nav class="fixed bottom-0 w-full bg-[#F5F2EB] border-t border-gray-200 pt-3 pb-6 px-6 flex justify-between items-center z-50">
+        <a href="/" class="flex flex-col items-center text-gray-400 hover:text-black transition-colors">
+            <i class="ph ph-storefront text-2xl mb-1"></i>
+            <span class="text-[10px] font-semibold">Store</span>
+        </a>
+        <a href="/inventory" class="flex flex-col items-center text-gray-400 hover:text-black transition-colors">
+            <i class="ph ph-package text-2xl mb-1"></i>
+            <span class="text-[10px] font-semibold">Inventory</span>
+        </a>
+        <a href="/cart" class="flex flex-col items-center text-gray-400 hover:text-black transition-colors">
+            <i class="ph ph-shopping-cart text-2xl mb-1"></i>
+            <span class="text-[10px] font-semibold">Cart</span>
+        </a>
+        <a href="/events" class="flex flex-col items-center text-gray-400 hover:text-black transition-colors">
+            <i class="ph ph-calendar-blank text-2xl mb-1"></i>
+            <span class="text-[10px] font-semibold">Events</span>
+        </a>
+    </nav>
+</body>
+</html>

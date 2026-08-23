@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminaire - Cart</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #F5F2EB;
+            color: #111827;
+        }
+    </style>
+    <!-- Icons from Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="min-h-screen pb-24 font-sans">
+
+    <!-- Main Content -->
+    <main class="px-5 pt-10 pb-32 max-w-2xl mx-auto">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold tracking-tight">My Cart</h1>
+            <span class="text-xs font-semibold bg-black text-white px-3 py-1.5 rounded-full">3 items</span>
+        </header>
+
+        <!-- Delivery Time Banner -->
+        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 mb-6 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-xl flex-shrink-0">
+                <i class="ph ph-lightning-fill"></i>
+            </div>
+            <div>
+                <p class="text-xs font-bold text-emerald-900 uppercase tracking-wide">Delivery in 8 minutes</p>
+                <p class="text-xs text-emerald-700">Shipment from Hub #04 • Kothri Kalan, MP</p>
+            </div>
+        </div>
+
+        <!-- Separated Cart Items List -->
+        <div class="space-y-2.0 mb-6">
+            
+            <!-- Item 1 -->
+            <div class="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center p-1.5 border border-gray-200 flex-shrink-0">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3050/3050153.png" class="w-full h-full object-contain" />
+                    </div>
+                    <div>
+                        <p class="font-bold text-sm text-gray-900">Amul Fresh Milk (1L)</p>
+                        <p class="text-xs text-gray-500 mt-0.5">₹68 / ea</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="font-bold text-sm mb-2">₹136</p>
+                    <div class="inline-flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+                        <button class="text-gray-500 hover:text-black"><i class="ph ph-minus text-xs"></i></button>
+                        <span class="text-xs font-bold w-3 text-center">2</span>
+                        <button class="text-gray-500 hover:text-black"><i class="ph ph-plus text-xs"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center p-1.5 border border-gray-200 flex-shrink-0">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3194/3194585.png" class="w-full h-full object-contain" />
+                    </div>
+                    <div>
+                        <p class="font-bold text-sm text-gray-900">Organic Hass Avocados</p>
+                        <p class="text-xs text-gray-500 mt-0.5">₹290 / ea</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="font-bold text-sm mb-2">₹290</p>
+                    <div class="inline-flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+                        <button class="text-gray-500 hover:text-black"><i class="ph ph-minus text-xs"></i></button>
+                        <span class="text-xs font-bold w-3 text-center">1</span>
+                        <button class="text-gray-500 hover:text-black"><i class="ph ph-plus text-xs"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center p-1.5 border border-gray-200 flex-shrink-0">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2405/2405479.png" class="w-full h-full object-contain" />
+                    </div>
+                    <div>
+                        <p class="font-bold text-sm text-gray-900">Pepsi Black Can (300ml)</p>
+                        <p class="text-xs text-gray-500 mt-0.5">₹40 / ea</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="font-bold text-sm mb-2">₹120</p>
+                    <div class="inline-flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+                        <button class="text-gray-500 hover:text-black"><i class="ph ph-minus text-xs"></i></button>
+                        <span class="text-xs font-bold w-3 text-center">3</span>
+                        <button class="text-gray-500 hover:text-black"><i class="ph ph-plus text-xs"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bill Details Breakdown -->
+        <div class="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm mb-6">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">Bill Details</h3>
+            <div class="space-y-2.5 text-sm text-gray-600">
+                <div class="flex justify-between"><span>Items Total</span><span class="text-black font-medium">₹546</span></div>
+                <div class="flex justify-between"><span>Delivery Charge</span><span class="text-emerald-600 font-medium">FREE</span></div>
+                <div class="flex justify-between"><span>Handling & Packing</span><span class="text-black font-medium">₹15</span></div>
+                <div class="flex justify-between"><span>Taxes & GST (18%)</span><span class="text-black font-medium">₹98</span></div>
+                <div class="flex justify-between text-xl font-bold text-black pt-4 mt-2 border-t border-gray-200">
+                    <span>To Pay</span>
+                    <span>₹659</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Button -->
+        <button class="w-full bg-black text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors shadow-lg">
+            <span>Proceed to Checkout</span>
+            <i class="ph ph-arrow-right text-lg"></i>
+        </button>
+    </main>
+
+    <!-- Unified Bottom Navigation -->
+    <nav class="fixed bottom-0 w-full bg-[#F5F2EB] border-t border-gray-200 pt-3 pb-6 px-6 flex justify-between items-center z-50">
+        <a href="/" class="flex flex-col items-center text-gray-400 hover:text-black transition-colors">
+            <i class="ph ph-storefront text-2xl mb-1"></i>
+            <span class="text-[10px] font-semibold">Store</span>
+        </a>
+        <a href="/inventory" class="flex flex-col items-center text-gray-400 hover:text-black transition-colors">
+            <i class="ph ph-package text-2xl mb-1"></i>
+            <span class="text-[10px] font-semibold">Inventory</span>
+        </a>
+        <a href="/cart" class="flex flex-col items-center text-black">
+            <i class="ph ph-shopping-cart text-2xl mb-1"></i>
+            <span class="text-[10px] font-semibold">Cart</span>
+        </a>
+        <a href="/events" class="flex flex-col items-center text-gray-400 hover:text-black transition-colors">
+            <i class="ph ph-calendar-blank text-2xl mb-1"></i>
+            <span class="text-[10px] font-semibold">Events</span>
+        </a>
+    </nav>
+</body>
+</html>

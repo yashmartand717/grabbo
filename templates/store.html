@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminaire</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #F5F2EB;
+            color: #111827;
+        }
+        /* Splash Screen Animation */
+        @keyframes splashFade {
+            0% { opacity: 1; z-index: 9999; }
+            75% { opacity: 1; z-index: 9999; }
+            100% { opacity: 0; z-index: -1; visibility: hidden; }
+        }
+        .splash-screen {
+            animation: splashFade 2.2s ease-in-out forwards;
+        }
+    </style>
+    <!-- Check if app already launched in this session -->
+    <script>
+        if (sessionStorage.getItem('appLaunched')) {
+            // Hide splash screen instantly if already launched
+            document.write('<style>.splash-screen { display: none !important; }</style>');
+        } else {
+            sessionStorage.setItem('appLaunched', 'true');
+        }
+    </script>
+    <!-- Icons from Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="min-h-screen pb-24 font-sans relative">
+
+    <!-- App Launch Splash Screen -->
+    <div class="splash-screen fixed inset-0 bg-white flex items-center justify-center">
+        <!-- Grabbo Logo -->
+        <img src="/static/306416154_413634597353696_7349665440400445824_n.jpg" alt="Grabbo Logo" class="w-52 h-52 object-contain" />
+    </div>
+
+    <!-- Main Content -->
+    <main class="px-5 pt-10 pb-32 max-w-7xl mx-auto">
+        <header class="flex justify-between items-center mb-6">
+            <i class="ph ph-list text-2xl text-gray-800"></i>
+            <h1 class="text-2xl font-bold tracking-tight">Luminaire</h1>
+            <div class="flex items-center gap-4">
+                <i class="ph ph-magnifying-glass text-2xl text-gray-800"></i>
+                <div class="w-8 h-8 rounded-full bg-gray-300 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Profile" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="relative mb-6">
+            <i class="ph ph-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-lg"></i>
+            <input type="text" placeholder="Search premium selections..." class="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-2xl text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-black" />
+        </div>
+
+        <!-- Promotional Banner Carousel -->
+        <div class="relative w-full overflow-hidden rounded-3xl border border-black/15 shadow-[0_25px_60px_-10px_rgba(0,0,0,0.18)] mb-8">
+            <div id="carousel-track" class="flex transition-transform duration-500 ease-out">
+                
+                <!-- Slide 1: Events & Summit -->
+                <div class="w-full flex-shrink-0 relative h-44 bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 flex flex-col justify-between">
+                    <div class="absolute inset-0 opacity-20 bg-cover bg-center pointer-events-none" style="background-image: url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="relative z-10">
+                        <span class="bg-white/20 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Featured Event</span>
+                        <h3 class="text-xl font-bold mt-2">Logistics Innovation Summit</h3>
+                        <p class="text-xs text-blue-100 mt-1">Book your executive passes now for Oct 12-14</p>
+                    </div>
+                    <a href="/events" class="relative z-10 inline-flex items-center gap-1 bg-white text-black text-xs font-bold px-4 py-2 rounded-xl w-max hover:bg-gray-100 transition-colors shadow-sm">
+                        Explore Event <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Slide 2: Pet Care Special -->
+                <div class="w-full flex-shrink-0 relative h-44 bg-gradient-to-r from-amber-600 to-yellow-600 text-white p-6 flex flex-col justify-between">
+                    <div class="absolute inset-0 opacity-20 bg-cover bg-center pointer-events-none" style="background-image: url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="relative z-10">
+                        <span class="bg-white/20 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Super Saver Week</span>
+                        <h3 class="text-xl font-bold mt-2">Pet Care Supplies at Your Door</h3>
+                        <p class="text-xs text-yellow-100 mt-1">Food, treats, toys & grooming essentials</p>
+                    </div>
+                    <button class="relative z-10 bg-white text-black text-xs font-bold px-4 py-2 rounded-xl w-max hover:bg-gray-100 transition-colors shadow-sm">
+                        Order Now <i class="ph ph-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Slide 3: Quick Commerce Offer -->
+                <div class="w-full flex-shrink-0 relative h-44 bg-gradient-to-r from-teal-700 to-emerald-800 text-white p-6 flex flex-col justify-between">
+                    <div class="absolute inset-0 opacity-20 bg-cover bg-center pointer-events-none" style="background-image: url('https://images.unsplash.com/photo-1584820927498-cafe3c0b1ff8?auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="relative z-10">
+                        <span class="bg-white/20 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Lightning Fast</span>
+                        <h3 class="text-xl font-bold mt-2">Cleaning & Home Essentials</h3>
+                        <p class="text-xs text-emerald-100 mt-1">Delivered to your doorstep in 8 minutes flat</p>
+                    </div>
+                    <button class="relative z-10 bg-white text-black text-xs font-bold px-4 py-2 rounded-xl w-max hover:bg-gray-100 transition-colors shadow-sm">
+                        Shop Now <i class="ph ph-arrow-right"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Carousel Indicators (Dots) -->
+            <div class="absolute bottom-3 right-4 flex gap-1.5 z-20" id="carousel-dots">
+                <button class="w-2 h-2 rounded-full bg-white transition-all shadow-sm" onclick="currentSlide(0)"></button>
+                <button class="w-2 h-2 rounded-full bg-white/50 transition-all shadow-sm" onclick="currentSlide(1)"></button>
+                <button class="w-2 h-2 rounded-full bg-white/50 transition-all shadow-sm" onclick="currentSlide(2)"></button>
+            </div>
+        </div>
+
+        <h2 class="text-xl font-bold mb-5">Categories</h2>
+
+        <!-- Trimmed 8 Categories Grid with Links to Dedicated Pages -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+            
+            <!-- Category 1 -->
+            <a href="/category/dairy" class="bg-white rounded-3xl p-3.5 flex flex-col items-center text-center cursor-pointer border border-black/15 shadow-[0_20px_45px_-8px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300">
+                <div class="bg-gray-100 rounded-2xl p-2.5 w-16 h-16 flex items-center justify-center mb-2.5 border border-gray-200 shadow-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3050/3050153.png" class="max-w-[38px] max-h-[38px] object-contain" alt="Dairy, Bread & Eggs" />
+                </div>
+                <span class="text-[11px] font-semibold leading-tight text-gray-800">Dairy, Bread<br/>& Eggs</span>
+            </a>
+
+            <!-- Category 2 -->
+            <a href="/category/fruits" class="bg-white rounded-3xl p-3.5 flex flex-col items-center text-center cursor-pointer border border-black/15 shadow-[0_20px_45px_-8px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300">
+                <div class="bg-gray-100 rounded-2xl p-2.5 w-16 h-16 flex items-center justify-center mb-2.5 border border-gray-200 shadow-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3194/3194585.png" class="max-w-[38px] max-h-[38px] object-contain" alt="Fruits & Vegetables" />
+                </div>
+                <span class="text-[11px] font-semibold leading-tight text-gray-800">Fruits &<br/>Vegetables</span>
+            </a>
+
+            <!-- Category 3 -->
+            <a href="/category/drinks" class="bg-white rounded-3xl p-3.5 flex flex-col items-center text-center cursor-pointer border border-black/15 shadow-[0_20px_45px_-8px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300">
+                <div class="bg-gray-100 rounded-2xl p-2.5 w-16 h-16 flex items-center justify-center mb-2.5 border border-gray-200 shadow-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2405/2405479.png" class="max-w-[38px] max-h-[38px] object-contain" alt="Cold Drinks & Juices" />
+                </div>
+                <span class="text-[11px] font-semibold leading-tight text-gray-800">Cold Drinks<br/>& Juices</span>
+            </a>
+
+            <!-- Category 4 -->
+            <a href="/category/snacks" class="bg-white rounded-3xl p-3.5 flex flex-col items-center text-center cursor-pointer border border-black/15 shadow-[0_20px_45px_-8px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300">
+                <div class="bg-gray-100 rounded-2xl p-2.5 w-16 h-16 flex items-center justify-center mb-2.5 border border-gray-200 shadow-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2553/2553690.png" class="max-w-[38px] max-h-[38px] object-contain" alt="Snacks & Munchies" />
+                </div>
+                <span class="text-[11px] font-semibold leading-tight text-gray-800">Snacks &<br/>Munchies</span>
+            </a>
+
+            <!-- Category 5 -->
+            <a href="/category/breakfast" class="bg-white rounded-3xl p-3.5 flex flex-col items-center text-center cursor-pointer border border-black/15 shadow-[0_20px_45px_-8px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300">
+                <div class="bg-gray-100 rounded-2xl p-2.5 w-16 h-16 flex items-center justify-center mb-2.5 border border-gray-200 shadow-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2619/2619554.png" class="max-w-[38px] max-h-[38px] object-contain" alt="Breakfast & Instant Food" />
+                </div>
+                <span class="text-[11px] font-semibold leading-tight text-gray-800">Breakfast &<br/>Instant Food</span>
+            </a>
+
+            <!-- Category 6 -->
+            <a href="/category/sweets" class="bg-white rounded-3xl p-3.5 flex flex-col items-center text-center cursor-pointer border border-black/15 shadow-[0_20px_45px_-8px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300">
+                <div class="bg-gray-100 rounded-2xl p-2.5 w-16 h-16 flex items-center justify-center mb-2.5 border border-gray-200 shadow-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1047/1047607.png" class="max-w-[38px] max-h-[38px] object-contain" alt="Sweet Tooth" />
+                </div>
+                <span class="text-[11px] font-semibold leading-tight text-gray-800">Sweet<br/>Tooth</span>
+            </a>
+
+            <!-- Category 7 -->
+            <a href="/category/bakery" class="bg-white rounded-3xl p-3.5 flex flex-col items-center text-center cursor-pointer border border-black/15 shadow-[0_20px_45px_-8px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300">
+                <div class="bg-gray-100 rounded-2xl p-2.5 w-16 h-16 flex items-center justify-center mb-2.5 border border-gray-200 shadow-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3014/3014620.png" class="max-w-[38px] max-h-[38px] object-contain" alt="Bakery & Biscuits" />
+                </div>
+                <span class="text-[11px] font-semibold leading-tight text-gray-800">Bakery &<br/>Biscuits</span>
+            </a>
+
+            <!-- Category 8 -->
+            <a href="/category/tea" class="bg-white rounded-3xl p-3.5 flex flex-col items-center text-center cursor-pointer border border-black/15 shadow-[0_20px_45px_-8px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300">
+                <div class="bg-gray-100 rounded-2xl p-2.5 w-16 h-16 flex items-center justify-center mb-2.5 border border-gray-200 shadow-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2738/2738730.png" class="max-w-[38px] max-h-[38px] object-contain" alt="Tea, Coffee & Milk Drinks" />
+                </div>
+                <span class="text-[11px] font-semibold leading-tight text-gray-800">Tea, Coffee &<br/>Milk Drinks</span>
+            </a>
+
+        </div>
+    </main>
+    
+    <!-- Carousel Auto-Slide Script -->
+    <script>
+        let slideIndex = 0;
+        const track = document.getElementById('carousel-track');
+        const dots = document.getElementById('carousel-dots').children;
+        const totalSlides = 3;
+
+        function updateSlide() {
+            track.style.transform = `translateX(-${slideIndex * 100}%)`;
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.toggle('bg-white', i === slideIndex);
+                dots[i].classList.toggle('bg-white/50', i !== slideIndex);
+            }
+        }
+
+        function currentSlide(index) {
+            slideIndex = index;
+            updateSlide();
+        }
+
+        setInterval(() => {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            updateSlide();
+        }, 4000);
+    </script>
+
+    <!-- Unified Bottom Navigation -->
+    <nav class="fixed bottom-0 w-full bg-[#F5F2EB] border-t border-gray-200 pt-3 pb-6 px-6 flex justify-between items-center z-50">
+        <a href="/" class="flex flex-col items-center text-black">
+            <i class="ph ph-storefront text-2xl mb-1"></i>
+            <span class="text-[10px] font-semibold">Store</span>
+        </a>
+        <a href="/inventory" class="flex flex-col items-center text-gray-400 hover:text-black transition-colors">
+            <i class="ph ph-package text-2xl mb-1"></i>
+            <span class="text-[10px] font-semibold">Inventory</span>
+        </a>
+        <a href="/cart" class="flex flex-col items-center text-gray-400 hover:text-black transition-colors">
+            <i class="ph ph-shopping-cart text-2xl mb-1"></i>
+            <span class="text-[10px] font-semibold">Cart</span>
+        </a>
+        <a href="/events" class="flex flex-col items-center text-gray-400 hover:text-black transition-colors">
+            <i class="ph ph-calendar-blank text-2xl mb-1"></i>
+            <span class="text-[10px] font-semibold">Events</span>
+        </a>
+    </nav>
+</body>
+</html>
